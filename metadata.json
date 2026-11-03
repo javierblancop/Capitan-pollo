@@ -1,0 +1,6 @@
+{
+  "name": "Capitán Pollo - Asador & Camperos en Torremolinos",
+  "description": "Web oficial del asador Capitán Pollo en Torremolinos (Málaga). Famosos pollos asados con aliño casero, camperos malagueños, patatas al jugo, tarta de queso y pedidos por WhatsApp para llevar o a domicilio.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

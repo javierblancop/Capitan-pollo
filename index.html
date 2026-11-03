@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Capitán Pollo | Asador y Camperos en Torremolinos</title>
+    <meta
+      name="description"
+      content="Asador de pollos y camperos en Torremolinos (Av. Joan Miró, 4). Famoso pollo asado con aliño casero, auténtico campero malagueño, patatas al jugo y postres artesanos. Encargos al 612 56 88 58."
+    />
+    <meta name="theme-color" content="#1c1917" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- Open Graph & Twitter -->
+    <meta property="og:title" content="Capitán Pollo | Asador y Camperos en Torremolinos" />
+    <meta
+      property="og:description"
+      content="Los mejores pollos asados y auténticos camperos malagueños en Torremolinos. Encargos por teléfono y WhatsApp sin esperas."
+    />
+    <meta property="og:type" content="restaurant.restaurant" />
+    <meta property="og:locale" content="es_ES" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Capitán Pollo Torremolinos" />
+    <meta
+      name="twitter:description"
+      content="Asador tradicional, pollos asados crujientes, camperos y tarta de queso en Av. Joan Miró, 4, Torremolinos."
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍗</text></svg>" />
+
+    <!-- Schema.org JSON-LD structured data for Restaurant -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FastFoodRestaurant",
+      "name": "Capitán Pollo",
+      "image": "https://capitanpollo.torremolinos.es/hero.jpg",
+      "description": "Asador de pollos y comida para llevar en Torremolinos especializado en pollos asados con aliño casero, camperos malagueños y raciones tradicionales.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. Joan Miró, 4",
+        "addressLocality": "Torremolinos",
+        "postalCode": "29620",
+        "addressRegion": "Málaga",
+        "addressCountry": "ES"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 36.6234,
+        "longitude": -4.5002
+      },
+      "telephone": "+34612568858",
+      "servesCuisine": ["Asador", "Pollo Asado", "Campero Malagueño", "Comida Española para llevar"],
+      "priceRange": "€",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          "opens": "09:00",
+          "closes": "16:00"
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "194",
+        "bestRating": "5"
+      }
+    }
+    </script>
+  </head>
+  <body class="bg-stone-50 text-stone-900 font-sans antialiased selection:bg-amber-500 selection:text-white overflow-x-hidden min-w-[320px]">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
