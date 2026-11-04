@@ -56,11 +56,11 @@ export const Hero: React.FC<HeroProps> = ({ onOpenOrder }) => {
             {/* Primary Action Buttons */}
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
               <a
-                href="#carta"
+                href="#especialidades"
                 className="inline-flex items-center justify-center gap-2 px-6 py-4 min-h-[50px] text-sm sm:text-base font-extrabold text-stone-950 bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 rounded-2xl shadow-xl shadow-amber-900/40 transition-all hover:scale-[1.02] active:scale-100 text-center"
               >
                 <Utensils className="w-4 h-4" />
-                <span>Ver Carta con Fotos y Precios</span>
+                <span>Ver Especialidades y Precios</span>
               </a>
 
               <button

@@ -38,7 +38,7 @@ export const Navbar: React.FC<NavbarProps> = ({ cartCount, onOpenCart }) => {
         </a>
 
         {/* Zone 2: Navigation links */}
-        <nav className="hidden lg:flex items-center gap-5 xl:gap-7 text-sm font-medium text-stone-300">
+        <nav className="hidden lg:flex items-center gap-6 xl:gap-8 text-sm font-medium text-stone-300">
           <a
             href="#navidad"
             className="text-amber-400 hover:text-amber-300 transition-colors whitespace-nowrap shrink-0 py-2 flex items-center gap-1.5 font-bold"
@@ -47,14 +47,14 @@ export const Navbar: React.FC<NavbarProps> = ({ cartCount, onOpenCart }) => {
             <span>Especial Navidad</span>
           </a>
           <a
-            href="#carta"
-            className="hover:text-amber-400 transition-colors whitespace-nowrap shrink-0 py-2"
+            href="#especialidades"
+            className="hover:text-amber-400 transition-colors whitespace-nowrap shrink-0 py-2 font-medium"
           >
-            Nuestra Carta
+            Especialidades
           </a>
           <a
             href="#galeria"
-            className="hover:text-amber-400 transition-colors whitespace-nowrap shrink-0 py-2 flex items-center gap-1"
+            className="hover:text-amber-400 transition-colors whitespace-nowrap shrink-0 py-2 flex items-center gap-1 font-medium"
           >
             <Camera className="w-3.5 h-3.5 text-amber-400" />
             <span>Fotos del Asador</span>
@@ -134,11 +134,11 @@ export const Navbar: React.FC<NavbarProps> = ({ cartCount, onOpenCart }) => {
               <span>Especial Navidad & Fiestas</span>
             </a>
             <a
-              href="#carta"
+              href="#especialidades"
               onClick={() => setMobileMenuOpen(false)}
               className="flex items-center min-h-[48px] px-3.5 py-2 text-base font-semibold text-stone-200 hover:bg-stone-900 hover:text-amber-400 rounded-xl transition-colors"
             >
-              Nuestra Carta & Precios
+              Especialidades (Pollo, Camperos, Tarta)
             </a>
             <a
               href="#galeria"
