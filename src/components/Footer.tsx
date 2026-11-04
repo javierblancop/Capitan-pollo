@@ -30,8 +30,8 @@ export const Footer: React.FC = () => {
             </h4>
             <ul className="space-y-2 text-xs sm:text-sm text-stone-400">
               <li>
-                <a href="#carta" className="hover:text-amber-400 transition-colors py-1 inline-block">
-                  Carta & Precios
+                <a href="#navidad" className="hover:text-amber-400 transition-colors py-1 inline-block">
+                  Especial Navidad & Fiestas
                 </a>
               </li>
               <li>

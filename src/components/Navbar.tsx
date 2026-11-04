@@ -10,7 +10,6 @@ interface NavbarProps {
 export const Navbar: React.FC<NavbarProps> = ({ cartCount, onOpenCart }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  // Prevent background scroll when mobile drawer is open
   useEffect(() => {
     if (mobileMenuOpen) {
       document.body.style.overflow = 'hidden';
@@ -24,20 +23,26 @@ export const Navbar: React.FC<NavbarProps> = ({ cartCount, onOpenCart }) => {
 
   return (
     <header className="sticky top-0 z-40 bg-stone-950/95 backdrop-blur-md text-white border-b border-stone-800 pt-safe">
-      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 sm:h-18 flex items-center justify-between gap-2 sm:gap-6">
-        {/* Zone 1: Brand wordmark with Christmas touch */}
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-18 sm:h-20 flex items-center justify-between gap-3 sm:gap-6">
+        {/* Zone 1: Brand wordmark - Enlarged per user request */}
         <a
           href="#"
-          className="text-lg sm:text-2xl font-extrabold tracking-tight text-amber-400 hover:text-amber-300 transition-colors whitespace-nowrap shrink-0 flex items-center gap-1.5 sm:gap-2 min-h-[44px]"
+          className="group flex items-center gap-2 sm:gap-2.5 min-h-[48px] py-1"
+          aria-label="Capitán Pollo - Inicio"
         >
-          <span className="relative flex items-center text-xl sm:text-2xl" aria-hidden="true">
-            <span className="absolute -top-2.5 -left-1 text-sm select-none">🎅</span>
+          {/* CSS selector 1 targeted: Chicken icon with holiday accent */}
+          <span className="relative flex items-center text-3xl sm:text-4xl transition-transform duration-300 group-hover:scale-110 drop-shadow-md" aria-hidden="true">
+            <span className="absolute -top-2.5 -left-1 text-base select-none">🎅</span>
             🍗
           </span>
-          <span className="truncate max-w-[170px] xs:max-w-none">Capitán Pollo</span>
+
+          {/* CSS selector 2 targeted: Capitán Pollo text made larger and more prominent */}
+          <span className="text-2xl sm:text-3xl lg:text-3xl font-black tracking-tight text-amber-400 group-hover:text-amber-300 transition-colors drop-shadow-sm whitespace-nowrap">
+            Capitán Pollo
+          </span>
         </a>
 
-        {/* Zone 2: Navigation links */}
+        {/* Zone 2: Streamlined Navigation links (removed carta, kept high value items) */}
         <nav className="hidden lg:flex items-center gap-6 xl:gap-8 text-sm font-medium text-stone-300">
           <a
             href="#navidad"
@@ -58,12 +63,6 @@ export const Navbar: React.FC<NavbarProps> = ({ cartCount, onOpenCart }) => {
           >
             <Camera className="w-3.5 h-3.5 text-amber-400" />
             <span>Fotos del Asador</span>
-          </a>
-          <a
-            href="#especialidades"
-            className="hover:text-amber-400 transition-colors whitespace-nowrap shrink-0 py-2"
-          >
-            Especialidades
           </a>
           <a
             href="#como-llegar"
@@ -118,7 +117,7 @@ export const Navbar: React.FC<NavbarProps> = ({ cartCount, onOpenCart }) => {
 
       {/* Mobile drawer nav */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 top-16 sm:top-18 z-50 lg:hidden">
+        <div className="fixed inset-0 top-18 z-50 lg:hidden">
           <div
             className="absolute inset-0 bg-black/60 backdrop-blur-xs"
             onClick={() => setMobileMenuOpen(false)}
@@ -138,7 +137,7 @@ export const Navbar: React.FC<NavbarProps> = ({ cartCount, onOpenCart }) => {
               onClick={() => setMobileMenuOpen(false)}
               className="flex items-center min-h-[48px] px-3.5 py-2 text-base font-semibold text-stone-200 hover:bg-stone-900 hover:text-amber-400 rounded-xl transition-colors"
             >
-              Especialidades (Pollo, Camperos, Tarta)
+              Nuestras Especialidades
             </a>
             <a
               href="#galeria"
@@ -147,13 +146,6 @@ export const Navbar: React.FC<NavbarProps> = ({ cartCount, onOpenCart }) => {
             >
               <Camera className="w-4 h-4 text-amber-400" />
               <span>Fotos del Asador</span>
-            </a>
-            <a
-              href="#especialidades"
-              onClick={() => setMobileMenuOpen(false)}
-              className="flex items-center min-h-[48px] px-3.5 py-2 text-base font-semibold text-stone-200 hover:bg-stone-900 hover:text-amber-400 rounded-xl transition-colors"
-            >
-              Especialidades (Pollo, Camperos, Tarta)
             </a>
             <a
               href="#como-llegar"
@@ -173,19 +165,10 @@ export const Navbar: React.FC<NavbarProps> = ({ cartCount, onOpenCart }) => {
             <div className="pt-3 border-t border-stone-800 space-y-2">
               <a
                 href={`tel:${RESTAURANT_INFO.phone}`}
-                className="flex items-center justify-center gap-2 w-full py-3 px-4 rounded-xl font-bold text-sm text-stone-950 bg-amber-400 hover:bg-amber-300 transition-colors min-h-[48px]"
+                className="flex items-center justify-center gap-2 w-full py-3 px-4 rounded-xl font-bold text-sm text-white bg-amber-600 hover:bg-amber-500 transition-colors min-h-[48px]"
               >
-                <Phone className="w-4 h-4" />
+                <Phone className="w-4 h-4 text-white" />
                 <span>Llamar al {RESTAURANT_INFO.phoneDisplay}</span>
-              </a>
-
-              <a
-                href={`https://wa.me/${RESTAURANT_INFO.phoneClean}?text=Hola%20Capit%C3%A1n%20Pollo%2C%20quisiera%20hacer%20un%20encargo`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 w-full py-3 px-4 rounded-xl font-bold text-sm text-white bg-emerald-600 hover:bg-emerald-500 transition-colors min-h-[48px]"
-              >
-                <span>Hacer Pedido por WhatsApp</span>
               </a>
             </div>
           </div>

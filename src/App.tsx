@@ -11,7 +11,6 @@ import { ChristmasSection } from './components/ChristmasSection';
 import { SnowEffect } from './components/SnowEffect';
 import { SpecialtiesSection } from './components/SpecialtiesSection';
 import { GallerySection } from './components/GallerySection';
-import { MenuSection } from './components/MenuSection';
 import { AboutAndStory } from './components/AboutAndStory';
 import { LocationAndHours } from './components/LocationAndHours';
 import { ReviewsSection } from './components/ReviewsSection';
@@ -129,7 +128,7 @@ export default function App() {
 
       {/* Main content with padding bottom on mobile */}
       <main className="flex-1 pb-24 sm:pb-0">
-        {/* Eye-catching Hero */}
+        {/* Eye-catching Hero with prominent brand and takeaway CTA */}
         <Hero onOpenOrder={() => setIsCartOpen(true)} />
 
         {/* Dedicated Christmas Holidays Section */}
@@ -139,16 +138,9 @@ export default function App() {
           addedItemToastId={addedItemToastId}
         />
 
-        {/* 3 Core Specialties */}
+        {/* 3 Core Specialties (with direct ordering) */}
         <SpecialtiesSection
           onSelectItem={(item) => setCustomizingItem(item)}
-        />
-
-        {/* Complete Menu with Photos on every dish */}
-        <MenuSection
-          onSelectItemForCustomize={(item) => setCustomizingItem(item)}
-          onDirectAddToCart={handleDirectAddToCart}
-          addedItemToastId={addedItemToastId}
         />
 
         {/* Visual Food Gallery: Directo del Horno a tu Mesa */}
@@ -199,20 +191,21 @@ export default function App() {
       >
         <a
           href={`tel:${RESTAURANT_INFO.phone}`}
-          className="min-h-[46px] min-w-[46px] flex items-center justify-center rounded-xl bg-stone-800 text-stone-200 border border-stone-700/80 shrink-0"
-          aria-label="Llamar al asador"
+          className="min-h-[46px] min-w-[46px] flex items-center justify-center rounded-xl bg-stone-850 text-stone-200 border border-stone-700/80 shrink-0"
+          aria-label={`Llamar a ${RESTAURANT_INFO.name}`}
+          title="Llamar"
         >
           <Phone className="w-5 h-5 text-amber-400" />
         </a>
 
         <a
-          href={`https://wa.me/${RESTAURANT_INFO.phoneClean}?text=Hola%20Capit%C3%A1n%20Pollo%2C%20quisiera%20hacer%20un%20encargo%20navide%C3%B1o`}
+          href={`https://wa.me/${RESTAURANT_INFO.phoneClean}?text=Hola%20Capit%C3%A1n%20Pollo%2C%20quisiera%20hacer%20un%20encargo`}
           target="_blank"
           rel="noopener noreferrer"
           className="flex-1 min-h-[46px] inline-flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl bg-emerald-600 active:bg-emerald-700 text-white font-bold text-xs shadow-xs"
         >
           <MessageCircle className="w-4 h-4 fill-white" />
-          <span>WhatsApp Asador</span>
+          <span>Pedir WhatsApp</span>
         </a>
 
         <button

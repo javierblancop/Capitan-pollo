@@ -15,10 +15,10 @@ export const Hero: React.FC<HeroProps> = ({ onOpenOrder }) => {
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-orange-600/20 rounded-full blur-3xl pointer-events-none" />
 
       {/* Prominent Christmas & rotisserie live banner */}
-      <div className="bg-gradient-to-r from-red-800 via-amber-600 to-red-800 text-stone-950 text-xs sm:text-sm font-bold py-2.5 px-4 shadow-inner">
-        <div className="max-w-7xl mx-auto flex items-center justify-center gap-2 text-center flex-wrap text-white">
+      <div className="bg-gradient-to-r from-red-800 via-amber-600 to-red-800 text-white text-xs sm:text-sm font-bold py-2.5 px-4 shadow-inner">
+        <div className="max-w-7xl mx-auto flex items-center justify-center gap-2 text-center flex-wrap">
           <span>🎄</span>
-          <span>¡Especial Navidad en Capitán Pollo! Reserva ya tu comida para Nochebuena, Navidad y Nochevieja</span>
+          <span>¡Especial Navidad en Capitán Pollo! Encarga ya tus menús de Nochebuena y Navidad</span>
           <span className="hidden md:inline">·</span>
           <a
             href="#navidad"
@@ -31,7 +31,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenOrder }) => {
 
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-10 sm:py-16 md:py-20 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-          {/* Left Column: Story & CTAs */}
+          {/* Left Column: Eye-catching & High Conversion */}
           <div className="lg:col-span-7 space-y-5 sm:space-y-6">
             {/* Trust badge with unboxed metadata */}
             <div className="flex flex-wrap items-center gap-2 sm:gap-3 text-xs sm:text-sm text-stone-300">
@@ -43,33 +43,45 @@ export const Hero: React.FC<HeroProps> = ({ onOpenOrder }) => {
               <span className="text-stone-300 font-medium">Av. Joan Miró, 4 · Torremolinos</span>
             </div>
 
-            {/* Main Headline with high-impact color accents */}
-            <h1 className="text-3xl xs:text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight sm:leading-tight text-balance">
-              El sabor del <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-amber-300">verdadero pollo asado</span> y los camperos rey de Torremolinos
-            </h1>
+            {/* Main Headline with BIGGER Capitán Pollo branding */}
+            <div className="space-y-2">
+              <span className="text-xs sm:text-sm font-black uppercase tracking-widest text-amber-400 block">
+                Asador Tradicional & Camperos
+              </span>
+              <h1 className="text-4xl xs:text-5xl sm:text-6xl lg:text-7xl font-black tracking-tight text-white leading-tight sm:leading-none text-balance">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-orange-400 to-amber-200">
+                  Capitán Pollo
+                </span>
+                <span className="block text-2xl xs:text-3xl sm:text-4xl lg:text-4xl font-extrabold text-stone-100 mt-2">
+                  Los mejores pollos asados y camperos de Torremolinos
+                </span>
+              </h1>
+            </div>
 
-            {/* Subtitle */}
+            {/* Subtitle - Punchy and Appetizing (less clutter) */}
             <p className="text-sm sm:text-base lg:text-lg text-stone-300 leading-relaxed max-w-2xl">
-              Asados a fuego pausado cada día con nuestro <strong className="text-amber-300 font-bold">aliño casero secreto</strong> de hierbas mediterráneas, limón y aceite de oliva virgen extra. Piel crujiente dorada, carne jugosa que se deshace, patatas en su propio jugo y auténticos <strong className="text-amber-300 font-bold">camperos malagueños</strong> en pan prensado.
+              Asados lentamente con nuestro aliño casero secreto de hierbas mediterráneas, ajo, limón y aceite de oliva virgen extra. Piel crujiente, carne jugosísima y los legendarios camperos malagueños en pan tostado.
             </p>
 
-            {/* Primary Action Buttons */}
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
-              <a
-                href="#especialidades"
-                className="inline-flex items-center justify-center gap-2 px-6 py-4 min-h-[50px] text-sm sm:text-base font-extrabold text-stone-950 bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 rounded-2xl shadow-xl shadow-amber-900/40 transition-all hover:scale-[1.02] active:scale-100 text-center"
-              >
-                <Utensils className="w-4 h-4" />
-                <span>Ver Especialidades y Precios</span>
-              </a>
-
+            {/* Action Buttons: Direct and High Conversion */}
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 pt-2">
+              {/* Encargar para Llevar */}
               <button
                 onClick={onOpenOrder}
-                className="inline-flex items-center justify-center gap-2 px-6 py-4 min-h-[50px] text-sm sm:text-base font-extrabold text-white bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 rounded-2xl shadow-xl shadow-emerald-950/40 transition-all hover:scale-[1.02] active:scale-100 text-center"
+                className="inline-flex items-center justify-center gap-2.5 px-8 py-4 min-h-[54px] text-base sm:text-lg font-black text-stone-950 bg-gradient-to-r from-amber-400 via-amber-300 to-amber-400 hover:from-amber-300 hover:to-amber-200 rounded-2xl shadow-xl shadow-amber-950/50 transition-all hover:scale-[1.02] active:scale-100 text-center ring-2 ring-amber-400/50 cursor-pointer"
               >
-                <MessageCircle className="w-4 h-4 fill-white" />
-                <span>Encargar por WhatsApp</span>
+                <MessageCircle className="w-5 h-5 fill-stone-950 text-stone-950" />
+                <span>Encargar para Llevar</span>
               </button>
+
+              {/* Ver Especialidades */}
+              <a
+                href="#especialidades"
+                className="inline-flex items-center justify-center gap-2 px-6 py-4 min-h-[54px] text-sm sm:text-base font-bold text-stone-200 hover:text-white bg-stone-900/90 hover:bg-stone-800 rounded-2xl border border-stone-700 transition-all text-center"
+              >
+                <Utensils className="w-4 h-4 text-amber-400" />
+                <span>Ver Especialidades</span>
+              </a>
             </div>
 
             {/* Quick Proof Strip */}
@@ -84,12 +96,12 @@ export const Hero: React.FC<HeroProps> = ({ onOpenOrder }) => {
               </div>
               <div className="flex items-center gap-2 col-span-2 sm:col-span-1">
                 <ShieldCheck className="w-4 h-4 text-amber-400 shrink-0" />
-                <span>A 5 min de la playa</span>
+                <span>Eventos y Familias</span>
               </div>
             </div>
           </div>
 
-          {/* Right Column: Hero Visual Showcase with bundled asset */}
+          {/* Right Column: Hero Visual Showcase */}
           <div className="lg:col-span-5">
             <div className="relative rounded-3xl overflow-hidden border-2 border-amber-500/30 shadow-2xl bg-stone-900 group">
               <img
@@ -107,7 +119,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenOrder }) => {
               {/* Floating Highlight Tag */}
               <div className="absolute top-4 right-4 bg-amber-500 text-stone-950 text-xs font-black px-3 py-1.5 rounded-full shadow-lg flex items-center gap-1.5 uppercase tracking-wider">
                 <Sparkles className="w-3.5 h-3.5" />
-                <span>Receta Casera</span>
+                <span>El Favorito de Torremolinos</span>
               </div>
 
               {/* Floating bottom badge on photo */}

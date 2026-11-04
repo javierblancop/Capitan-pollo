@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sparkles, Calendar, MessageCircle, Plus, Check } from 'lucide-react';
+import { Sparkles, MessageCircle, Plus, Check } from 'lucide-react';
 import { APP_IMAGES } from '../assets/images';
 import { MenuItem, MENU_ITEMS, RESTAURANT_INFO } from '../data/menuData';
 
@@ -73,13 +73,13 @@ export const ChristmasSection: React.FC<ChristmasSectionProps> = ({
 
               <div className="flex flex-wrap items-center gap-3 shrink-0">
                 <a
-                  href={`https://wa.me/${RESTAURANT_INFO.phoneClean}?text=Hola%20Capit%C3%A1n%20Pollo%2C%20quisiera%20reservar%20el%20Men%C3%BA%20Navide%C3%B1o`}
+                  href={`https://wa.me/${RESTAURANT_INFO.phoneClean}?text=Hola%20Capit%C3%A1n%20Pollo%2C%20quisiera%20encargar%20el%20Men%C3%BA%20Navide%C3%B1o`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs sm:text-sm shadow-xl active:scale-95 transition-all"
                 >
                   <MessageCircle className="w-4 h-4 fill-white" />
-                  <span>Reservar Menú Navideño</span>
+                  <span>Encargar Menú Navideño</span>
                 </a>
               </div>
             </div>
@@ -168,41 +168,17 @@ export const ChristmasSection: React.FC<ChristmasSectionProps> = ({
           })}
         </div>
 
-        {/* Christmas Opening Schedule Box */}
-        <div className="p-5 sm:p-8 rounded-3xl bg-stone-900 border border-stone-700/80 shadow-2xl space-y-5">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-stone-800 pb-4">
-            <div className="flex items-center gap-2 text-amber-400">
-              <Calendar className="w-5 h-5" />
-              <h3 className="text-base sm:text-lg font-bold text-white uppercase tracking-wider">
-                Horarios Especiales de Navidad y Fiestas
-              </h3>
-            </div>
-            <span className="text-xs text-amber-300 font-semibold bg-amber-500/20 px-3 py-1 rounded-full border border-amber-500/30">
-              ⚠️ Importante: Reservar con 48h de antelación
-            </span>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-xs sm:text-sm">
-            {RESTAURANT_INFO.christmasHours.map((ch, idx) => (
-              <div key={idx} className="p-3.5 rounded-2xl bg-stone-950/80 border border-stone-800 space-y-1">
-                <p className="font-bold text-amber-400">{ch.day}</p>
-                <p className="text-white font-semibold">{ch.hours}</p>
-                <p className="text-[11px] text-stone-400">{ch.note}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="pt-2 text-center sm:text-right">
-            <a
-              href={`https://wa.me/${RESTAURANT_INFO.phoneClean}?text=Hola%20Capit%C3%A1n%20Pollo%2C%20quisiera%20consultar%20los%20encargos%20para%20Navidad`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-amber-400 hover:text-amber-300 underline"
-            >
-              <span>Consultar disponibilidad y dudas de Navidad por WhatsApp</span>
-              <span>→</span>
-            </a>
-          </div>
+        {/* Simple Reservation WhatsApp CTA */}
+        <div className="text-center pt-2">
+          <a
+            href={`https://wa.me/${RESTAURANT_INFO.phoneClean}?text=Hola%20Capit%C3%A1n%20Pollo%2C%20quisiera%20consultar%20los%20encargos%20para%20Navidad`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-amber-400 hover:text-amber-300 underline py-2"
+          >
+            <span>¿Tienes dudas sobre los menús navideños? Consúltanos por WhatsApp</span>
+            <span>→</span>
+          </a>
         </div>
       </div>
     </section>
